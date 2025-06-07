@@ -108,30 +108,7 @@ document.querySelectorAll('.product-card, .benefit-card').forEach(card => {
     observer.observe(card);
 });
 
-// Add to cart functionality (simulation)
-document.querySelectorAll('.product-card .btn-small').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const productCard = this.closest('.product-card');
-        const productName = productCard.querySelector('h3').textContent;
-        const productPrice = productCard.querySelector('.price').textContent;
-        
-        // Visual feedback
-        const originalText = this.textContent;
-        this.textContent = 'Adicionado!';
-        this.style.background = '#4CAF50';
-        
-        // Show notification
-        showNotification(`${productName} adicionado ao carrinho!`);
-        
-        // Reset button after 2 seconds
-        setTimeout(() => {
-            this.textContent = originalText;
-            this.style.background = '';
-        }, 2000);
-    });
-});
+
 
 // Notification system
 function showNotification(message) {
