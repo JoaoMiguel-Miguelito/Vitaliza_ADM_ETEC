@@ -186,7 +186,7 @@ document.querySelectorAll('.btn-primary').forEach(button => {
                 ? 'Olá! Gostaria de fazer um pedido na Vitaliza.'
                 : 'Olá! Gostaria de ver o cardápio completo da Vitaliza.';
             
-            const whatsappUrl = `#`;//https://wa.me/5511999999999?text=${encodeURIComponent(message)}
+            const whatsappUrl = `https://wa.me/5515998430280?text=${encodeURIComponent(message)};`
             window.open(whatsappUrl, '_blank');
         });
     }
